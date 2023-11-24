@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+
+    <style>
+        th {
+            width: 40%;
+            text-align: left;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+        }
+
+        span {
+            color: rgb(191, 201, 213);
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Try a free sample</h1>
+    <p>Sign up to get a coupon you can redeem at your nearest Dancing<br>Goat cafe for a sample of the Colombia Carlos
+        Imbachi coffee. We'll <br> also make sure you don't miss out on news introducing the new <br> coffees that we
+        add to our store regularly.</p>
+
+    <table width="50%" cellspacing="0" cellpadding="5">
+        <tr>
+            <th><label for="firstname">First name</label></th>
+            <th><label for="lastname">Last name</label></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="firstname" placeholder="Enter First Name">
+            </td>
+            <td>
+                <input type="text" id="lastname" placeholder="Enter Last Name">
+            </td>
+        </tr>
+        <tr>
+            <th><label for="email">Email address</label></th>
+            <th><label for="address">Address</label></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="email" id="email" placeholder="Enter Email">
+            </td>
+            <td>
+                <input type="text" id="address" placeholder="Enter Address">
+            </td>
+        </tr>
+        <tr>
+            <th><label for="city">City</label></th>
+            <th><label for="state">State </label><span>(optional)</span></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="city" placeholder="Enter City">
+            </td>
+            <td>
+                <input type="text" id="sate" placeholder="">
+            </td>
+        </tr>
+        <tr>
+            <th><label for="code">ZIP code</label></th>
+            <th><label for="country">Country</label></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="code" placeholder="Enter code">
+            </td>
+            <td>
+                <select id="country" name="Choose">
+                    <option value="">--Please choose an option--</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Viet Nam">Viet Nam</option>
+                    <option value="America">America</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="send" method="post">
+                    <input class="send" type="submit" name="send" value="SEND ME FREE COFFEE">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+
+
+</html>
