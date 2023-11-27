@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        input[type=text] {
+            margin-bottom: 10px;
+        }
+
+        .role,
+        .sign-on {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            margin: 25px 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <label for="city">City of Employment:</label>
+            <input type="text" id="city" name="city">
+        </div>
+        <div>
+            <label for="web">Web server:</label>
+            <select name="web" id="web">
+                <option value="0">--Choose a server--</option>
+                <option value="1">NA</option>
+                <option value="2">SEA</option>
+                <option value="3">BRA</option>
+            </select>
+        </div>
+        <div class="role">
+
+            <label for="">Please specify your role:</label>
+
+            <div>
+                <label for="admin"><input type="radio" name="role" id="admin" value="1">Admin</label>
+                <div><label for="engineer"><input type="radio" name="role" id="engineer" value="2">Engineer</label>
+                </div>
+                <div><label for="manager"><input type="radio" name="role" id="manager" value="3">Manager</label></div>
+                <label for="guest"><input type="radio" name="role" id="guest" value="4">Guest</label>
+            </div>
+        </div>
+
+        <div class="sign-on">
+            <label>Single Sign-on to the following:</label>
+
+            <div>
+                <label for="mail"><input type="checkbox" name="" id="mail">Mail</label>
+                <div><label for="payroll"><input type="checkbox" name="" id="payroll">Payroll</label></div>
+                <label for="service"><input type="checkbox" name="" id="service">Self-service</label>
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit">Login</button>
+            <input type="reset">
+        </div>
+
+    </form>
+</body>
+
+</html>

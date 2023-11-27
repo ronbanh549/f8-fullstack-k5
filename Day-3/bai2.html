@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+    <style>
+        .feedback-heading {
+            text-align: center;
+            position: relative;
+        }
+
+        .feedback-heading::after {
+            position: absolute;
+            display: inline-block;
+            content: "";
+            transform: translateX(-25px);
+            left: 50%;
+            bottom: -10px;
+            height: 3px;
+            width: 45px;
+            background-color: #5f92fc;
+        }
+
+        .feedback__avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 15px;
+        }
+
+        .feedback-item {
+            display: flex;
+        }
+
+        .feedback-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .feedback__desc {
+            font-style: italic;
+        }
+
+        .feedback__author,
+        .feedback__desc {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="feedback">
+        <h2 class="feedback-heading">WHAT OUR CLIENTS SAY</h2>
+        <div class="feedback-list">
+            <!-- Item 1 -->
+            <aticle class="feedback-item">
+                <img src="./img/abc.jpg" alt="" class="feedback__avatar">
+                <div class="feedback__info">
+                    <p class="feedback__desc">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                        optio itaque magnam possimus soluta reprehenderit pariatur, aspernatur error porro blanditiis."
+                    </p>
+                    <h3 class="feedback__author">John Doe</h3>
+                </div>
+            </aticle>
+            <!-- Item 2 -->
+            <aticle class="feedback-item">
+                <img src="./img/abc.jpg" alt="" class="feedback__avatar">
+                <div class="feedback__info">
+                    <p class="feedback__desc">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                        optio itaque magnam possimus soluta reprehenderit pariatur, aspernatur error porro blanditiis."
+                    </p>
+                    <h3 class="feedback__author">John Doe</h3>
+                </div>
+            </aticle>
+            <!-- Item 3 -->
+            <aticle class="feedback-item">
+                <img src="./img/abc.jpg" alt="" class="feedback__avatar">
+                <div class="feedback__info">
+                    <p class="feedback__desc">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                        optio itaque magnam possimus soluta reprehenderit pariatur, aspernatur error porro blanditiis."
+                    </p>
+                    <h3 class="feedback__author">John Doe</h3>
+                </div>
+            </aticle>
+            <!-- Item 4 -->
+            <aticle class="feedback-item">
+                <img src="./img/abc.jpg" alt="" class="feedback__avatar">
+                <div class="feedback__info">
+                    <p class="feedback__desc">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                        optio itaque magnam possimus soluta reprehenderit pariatur, aspernatur error porro blanditiis."
+                    </p>
+                    <h3 class="feedback__author">John Doe</h3>
+                </div>
+            </aticle>
+            <!-- Item 5 -->
+            <aticle class="feedback-item">
+                <img src="./img/abc.jpg" alt="" class="feedback__avatar">
+                <div class="feedback__info">
+                    <p class="feedback__desc">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                        optio itaque magnam possimus soluta reprehenderit pariatur, aspernatur error porro blanditiis."
+                    </p>
+                    <h3 class="feedback__author">John Doe</h3>
+                </div>
+            </aticle>
+            <!-- Item 6 -->
+            <aticle class="feedback-item">
+                <img src="./img/abc.jpg" alt="" class="feedback__avatar">
+                <div class="feedback__info">
+                    <p class="feedback__desc">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                        optio itaque magnam possimus soluta reprehenderit pariatur, aspernatur error porro blanditiis."
+                    </p>
+                    <h3 class="feedback__author">John Doe</h3>
+                </div>
+            </aticle>
+        </div>
+    </section>
+</body>
+
+</html>

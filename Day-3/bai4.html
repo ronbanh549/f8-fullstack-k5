@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #address-list li {
+            display: inline-block;
+        }
+
+        #address-list a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            line-height: 40px;
+            padding: 0 30px;
+        }
+
+        a:hover {
+            background-color: #b09757;
+            color: #fff;
+        }
+
+        .address {
+            display: inline-block;
+            height: 40px;
+        }
+
+        #address-list {
+            width: 100%;
+            border: 2px solid #b09757;
+        }
+
+        .body {
+            margin-top: 60px;
+            display: flex;
+            height: 450px;
+            width: 100%;
+        }
+
+        .address-info {
+            padding: 60px 300px 30px 60px;
+            background: #f6f6f6;
+        }
+
+        .map {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="address">
+        <ul id="address-list">
+            <li><a href="#!">United Arab Emirates</a></li>
+            <li><a href="#!">London</a></li>
+            <li><a href="#!">Singapore</a></li>
+            <li><a href="#!">Hong Kong</a></li>
+        </ul>
+    </nav>
+
+    <!-- Body -->
+    <div class="body">
+        <section class="address-info">
+            <h2>Ricons Construction Investment JSC</h2>
+            <p>
+                96 Phan Đăng Lưu, Phường 5, Phú Nhuận, Thành phố Hồ Chí Minh 70000, Việt Nam
+            </p>
+            <p>
+                Tel: +84911 764 877 <br />
+                Fax: +971 2657 2323 <br />
+                Email: <a href="#!">ronbanh549@gmail.com</a>
+            </p>
+        </section>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0960444984294!2d106.68194917460355!3d10.803955658686196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b0c9ed5493%3A0xee89e3ed66bb1048!2sRicons%20Construction%20Investment%20JSC!5e0!3m2!1svi!2s!4v1701086790932!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
