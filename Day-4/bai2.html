@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .book {
+        padding: 50px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .book__heading,
+    .book__title,
+    input::placeholder {
+        color: #3A2517;
+
+    }
+
+    .book__heading,
+    input {
+        font-family: Bebas Neue;
+    }
+
+    .book__title,
+    button {
+        font-family: Alfa Slab One;
+    }
+
+    input {
+        padding: 14px;
+    }
+
+    button {
+        background: #B0322B;
+        border-radius: 5px;
+        outline: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .book__info {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+</style>
+
+<body>
+    <section class="book">
+        <form>
+            <h2 class="book__heading">RESERVATION</h2>
+            <h1 class="book__title">Book your table</h1>
+
+            <div class="book__info">
+                <input type="text" name="name" placeholder="NAME">
+                <input type="email" name="email" placeholder="EMAIL">
+                <input type="datetime" name="date" placeholder="DATE">
+                <input type="datetime" name="time" placeholder="TIME">
+                <input type="number" name="people" placeholder="PEOPLE">
+                <button type="submit">Find A Table</button>
+            </div>
+        </form>
+
+    </section>
+</body>
+
+</html>
