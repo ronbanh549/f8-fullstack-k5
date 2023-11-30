@@ -69,8 +69,10 @@
             <div class="book__info">
                 <input type="text" name="name" placeholder="NAME">
                 <input type="email" name="email" placeholder="EMAIL">
-                <input type="datetime" name="date" placeholder="DATE">
-                <input type="datetime" name="time" placeholder="TIME">
+                <input type="text" name="date-input" placeholder="DATE" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
+                <input type="text" name="time" placeholder="TIME" onfocus="(this.type='time')"
+                    onblur="(this.type='text')">
                 <input type="number" name="people" placeholder="PEOPLE">
                 <button type="submit">Find A Table</button>
             </div>
