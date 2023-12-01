@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a,
+    li {
+        text-decoration: none;
+        display: inline-block;
+        color: #000;
+    }
+
+    .best-seller {
+        margin-top: 50px;
+        text-align: center;
+        padding: 0 100px;
+    }
+
+    .menu {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        column-gap: 2px;
+    }
+
+    .menu [type="radio"] {
+        display: none;
+    }
+
+    .menu label {
+        padding: 12px;
+        background: #F4F4F4;
+    }
+
+    /* .menu [type="radio"]:not(:checked)~label {
+        background: #ddd;
+
+        color: white;
+    } */
+
+    .menu [type="radio"]:checked+label {
+        background: #29388E;
+        color: white;
+    }
+
+
+    .products {
+        margin-top: 40px;
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 25px;
+    }
+
+    .list-item__img img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+
+    }
+
+    .list-item__cover {
+        position: relative;
+    }
+
+    .img-hover {
+        display: none;
+    }
+
+    .list-item__img:hover .img-hover {
+        display: inline;
+    }
+
+    .list-item__img:hover img {
+        display: none;
+    }
+
+    .stars {
+        color: #F5C342;
+        margin-top: 15px;
+    }
+
+    .btn-hover {
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+        z-index: 1;
+        display: none;
+    }
+
+    .list-item__img:hover+.btn-hover {
+        display: inline;
+    }
+
+
+    .btn-hover-icon {
+        /* color: #fff; */
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .btn-hover-icon i {
+        padding: 10px;
+        background: #28378E;
+        color: #fff;
+    }
+
+    .btn-hover button {
+        background: #28378E;
+        color: white;
+        font-size: 15px;
+        border: none;
+        margin-top: 10px;
+        padding: 10px 30px 10px 35px;
+        width: 100%;
+    }
+
+    .product__name {
+        margin: 15px 0;
+    }
+</style>
+
+<body>
+    <section class="best-seller">
+        <h1 class="title">Best Seller</h1>
+        <div class="menu">
+            <input type="radio" id="skin-care" name="menu-item" value="Skincare" checked>
+            <label for="skin-care">Skincare
+            </label>
+            <input type="radio" id="hair-care" class="hair-care" name="menu-item" value="Haircare">
+            <label for="hair-care">Haircare
+            </label>
+            <input type="radio" id="cosmetics-cases" name="menu-item" value="Cosmetics Cases">
+            <label for="cosmetics-cases">Cosmetics Cases
+            </label>
+            <input type="radio" id="fragrance" name="menu-item" value="Fragrance">
+            <label for="fragrance">Fragrance
+            </label>
+            <input type="radio" id="make-up" name="menu-item" value="Makeup">
+            <label for="make-up">Makeup
+            </label>
+        </div>
+        <div class="products">
+            <div class="product-list">
+                <!-- item 1 -->
+                <div class="list-item">
+                    <div class="list-item__cover">
+                        <!-- img -->
+                        <div class="list-item__img">
+                            <a href="#!">
+                                <img src="./img/product-01.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                                <img class="img-hover" src="./img/product-02.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                            </a>
+                        </div>
+                        <!-- btn hover -->
+                        <div class="btn-hover">
+                            <div class="btn-hover-icon">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#!" class="product__name">
+                        <p>Casual Shirt With Ruffle Hern</p>
+                    </a>
+                    <strong class="product__price">$122.00</strong>
+                </div>
+                <!-- item 2 -->
+                <div class="list-item">
+                    <div class="list-item__cover">
+                        <!-- img -->
+                        <div class="list-item__img">
+                            <a href="#!">
+                                <img src="./img/product-03.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                                <img class="img-hover" src="./img/product-04.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                            </a>
+                        </div>
+                        <!-- btn hover -->
+                        <div class="btn-hover">
+                            <div class="btn-hover-icon">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#!" class="product__name">
+                        <p>Casual Shirt With Ruffle Hern</p>
+                    </a>
+                    <strong class="product__price">$122.00</strong>
+                </div>
+                <!-- item 3 -->
+                <div class="list-item">
+                    <div class="list-item__cover">
+                        <!-- img -->
+                        <div class="list-item__img">
+                            <a href="#!">
+                                <img src="./img/product-02.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                                <img class="img-hover" src="./img/product-03.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                            </a>
+                        </div>
+                        <!-- btn hover -->
+                        <div class="btn-hover">
+                            <div class="btn-hover-icon">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#!" class="product__name">
+                        <p>Casual Shirt With Ruffle Hern</p>
+                    </a>
+                    <strong class="product__price">$122.00</strong>
+                </div>
+                <!-- item 4 -->
+                <div class="list-item">
+                    <div class="list-item__cover">
+                        <!-- img -->
+                        <div class="list-item__img">
+                            <a href="#!">
+                                <img src="./img/product-04.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                                <img class="img-hover" src="./img/product-01.jpg" title="Casual Shirt With Ruffle Hern"
+                                    alt="Casual Shirt With Ruffle Hern">
+                            </a>
+                        </div>
+                        <!-- btn hover -->
+                        <div class="btn-hover">
+                            <div class="btn-hover-icon">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-right-left"></i>
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-solid fa-star active"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#!" class="product__name">
+                        <p>Casual Shirt With Ruffle Hern</p>
+                    </a>
+                    <strong class="product__price">$122.00</strong>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
