@@ -1,0 +1,171 @@
+html {
+    font-size: 62.5%;
+}
+.fa-solid {
+    font-size: 1rem;
+}
+
+.contact {
+    padding: 20px 40px;
+    width: 700px;
+}
+
+.contact__heading {
+    font-family: Lobster;
+    font-size: 3rem;
+    color: #333;
+}
+.contact__desc,
+.reminder,
+::placeholder,
+label {
+    font-family: Lato;
+}
+.contact__desc {
+    margin-top: 40px;
+    font-size: 1.4rem;
+    color: #ddd;
+}
+
+.contact__desc span {
+    color: #ec5045;
+}
+
+.contact__form {
+    margin-top: 30px;
+    position: relative;
+}
+
+.contact__form input,
+.contact__form select,
+textarea {
+    width: 100%;
+    display: inline-block;
+    padding: 16px;
+    border: none;
+    outline: 2px solid #ddd;
+    padding-left: 66px;
+}
+.contact__input-label select,
+label {
+    color: #999;
+}
+
+.contact__form input,
+textarea {
+    width: 618px;
+}
+.contact__form input:focus {
+    outline: 2px solid #333;
+}
+
+.contact__input {
+    margin-bottom: 15px;
+}
+
+.contact__input-label {
+    position: relative;
+}
+
+.contact__icon {
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    padding: 16px;
+    color: #fff;
+    background-color: #c2c2c2;
+    text-align: center;
+    cursor: pointer;
+    width: 16px;
+    height: 100%;
+}
+.contact__icon--right,
+.contact__icon--close {
+    position: absolute;
+    right: 16px;
+    bottom: 0px;
+    color: #ddd;
+}
+.contact__icon--close {
+    display: none;
+}
+
+.contact__input-label:hover input {
+    outline: 2px solid #333;
+}
+
+.contact__input-label:hover .contact__icon {
+    background: #333;
+    color: #fff;
+}
+.contact__form input:focus ~ .contact__icon,
+.contact__form textarea:focus ~ .contact__icon {
+    background: #333;
+    color: #fff;
+}
+
+.contact__form input:focus ~ .contact__icon--right {
+    display: none;
+}
+.contact__form input:focus ~ .contact__icon--close {
+    display: inline;
+}
+
+.contact__icon--message {
+    height: 154px;
+    bottom: 0;
+    left: 0;
+}
+.contact__icon--rightmessage {
+    bottom: 158px;
+    right: 14px;
+}
+
+.contact__icon--down {
+    bottom: -8px;
+}
+
+.reminder {
+    color: white;
+    width: 120px;
+    position: absolute;
+    top: -80px;
+    left: 26px;
+    background-color: #333333;
+    padding: 16px 16px;
+    z-index: 1;
+    display: none;
+}
+.reminder::after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 24px;
+    z-index: 2;
+    border-top: 5px solid #333333;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.contact__form input:focus ~ .reminder {
+    display: block;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    border: none;
+    outline: none;
+    color: #ddd;
+}
+
+.send-btn {
+    padding: 8px 32px;
+    background: #ea4033;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
