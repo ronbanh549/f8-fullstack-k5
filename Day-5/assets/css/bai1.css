@@ -70,7 +70,7 @@ textarea {
 .contact__icon {
     position: absolute;
     left: 0;
-    bottom: -16px;
+    bottom: -17px;
     padding: 16px;
     color: #fff;
     background-color: #c2c2c2;
@@ -112,7 +112,7 @@ textarea {
 }
 
 .contact__icon--message {
-    height: 154px;
+    height: 155px;
     bottom: 0;
     left: 0;
 }
