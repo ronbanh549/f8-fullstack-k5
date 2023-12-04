@@ -1,0 +1,38 @@
+.heading {
+    background: #d95825;
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.title {
+    display: inline;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.heading-input {
+    display: none;
+}
+
+.tutorial__content {
+    padding: 15px;
+    background: #fff;
+    display: none;
+}
+.heading-input:checked ~ .tutorial__content {
+    display: block;
+}
+.heading-input:checked ~ .heading .tutorial__icon--minus {
+    display: inline;
+}
+.heading-input:checked ~ .heading .tutorial__icon--plus {
+    display: none;
+}
+
+.heading .tutorial__icon--plus {
+    cursor: pointer;
+}
+.tutorial__icon--minus {
+    display: none;
+    cursor: pointer;
+}
