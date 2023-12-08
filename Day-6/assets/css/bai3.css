@@ -181,6 +181,8 @@ html {
     text-decoration: none;
     color: #000;
 }
-.login-form__register:hover {
+.login-form__register:hover,
+.login-form__group--forgot:hover {
     text-decoration: underline;
+    color: #ed6255;
 }
