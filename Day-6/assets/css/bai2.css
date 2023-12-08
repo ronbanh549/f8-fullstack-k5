@@ -1,0 +1,102 @@
+body {
+    width: 100%;
+    height: fit-content;
+    background-color: #ebf5fe;
+    display: flex;
+    justify-content: space-evenly;
+}
+section {
+    width: fit-content;
+    height: 485px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.fist-row,
+.second-row {
+    width: 1130px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.second-row {
+    margin-top: 30px;
+}
+.units {
+    width: 360px;
+    height: 230px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px 1px #aeaeae;
+}
+section .units:hover {
+    border: 2px solid #e84b3e;
+    cursor: pointer;
+}
+.unit-header {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.icons {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 1px 1px 1px 1px #c6c6c6;
+}
+
+.fist-row .unit-1 .icons {
+    background-image: linear-gradient(90deg, #e4587e, #e8917c);
+}
+.fist-row .unit-2 .icons {
+    background-image: linear-gradient(90deg, #50a6a4, #b0e9c4);
+}
+.fist-row .unit-3 .icons {
+    background-image: linear-gradient(90deg, #e18631, #f6d174);
+}
+.second-row .unit-1 .icons {
+    background-image: linear-gradient(90deg, #2e69cb, #8ea8f8);
+}
+.second-row .unit-2 .icons {
+    background-image: linear-gradient(90deg, #7024cb, #dcb0f5);
+}
+.second-row .unit-3 .icons {
+    background-image: linear-gradient(90deg, #68872b, #add481);
+}
+
+.fa-solid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2.5rem;
+    color: white;
+}
+h3 {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 12px;
+    font-size: 2rem;
+}
+p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #666666;
+}
+.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: white;
+    color: #1551df;
+    border: 0;
+    cursor: pointer;
+}
