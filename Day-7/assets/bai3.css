@@ -33,6 +33,11 @@ html {
     justify-content: center;
     row-gap: 5px;
 }
+.discover__address-item:hover {
+    background: #ae7b37;
+    color: #fff;
+    cursor: pointer;
+}
 
 .discover__address-item h2 {
     font-family: Asap;
@@ -50,19 +55,57 @@ html {
     width: 100%;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 440px);
     border-radius: 3px;
-    row-gap: 20px;
+    gap: 20px;
     overflow: hidden;
 }
 .content-item {
-    width: 350px;
+    width: 100%;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
 }
 
 .content-bg img {
     width: 100%;
     object-fit: cover;
-    height: 190px;
+    height: 300px;
+}
+
+.content-bg::before {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.212);
+    z-index: 1;
+}
+
+.content-address {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-family: Asap;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    z-index: 2;
+}
+
+.content-item p {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    font-family: Asap;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    z-index: 2;
+}
+
+.content-item strong {
+    font-weight: 600;
+    font-size: 20px;
 }
