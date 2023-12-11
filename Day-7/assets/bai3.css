@@ -66,6 +66,9 @@ html {
     overflow: hidden;
     position: relative;
 }
+.content-item:hover {
+    cursor: pointer;
+}
 
 .content-bg img {
     width: 100%;
