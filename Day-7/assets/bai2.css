@@ -1,0 +1,84 @@
+.profile__bg {
+    background-image: url(https://www.lesanh.com/wp-content/uploads/2017/11/Vinhomes-Landmark-81.jpg);
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.profile__content {
+    padding: 168px 0 50px 274px;
+    color: #fff;
+    font-family: Asap;
+}
+
+.profile__content-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.profile__content-info {
+    margin-top: 30px;
+    display: flex;
+    column-gap: 20px;
+    font-family: asap;
+}
+
+.profile__content-info strong {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: asap;
+}
+
+.profile__nav {
+    padding-right: 50px;
+    display: flex;
+    justify-content: flex-end;
+    background: #fff;
+    column-gap: 20px;
+}
+
+.profile__nav-item {
+    color: #000;
+    text-decoration: none;
+    padding: 15px 0;
+    font-family: Asap;
+    font-weight: 600;
+    position: relative;
+}
+
+.profile__nav-item:hover {
+    border-bottom: 3px solid #ef5350;
+    color: #ef5350;
+}
+/* .profile__nav-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: #DD5E56;
+    bottom: 2px;
+    right: 0;
+    display: none;
+} */
+
+/* .profile__nav-item:hover{
+    color: #DD5E56;
+} */
+
+.profile__avatar {
+    background: #fff;
+    width: 206px;
+    height: auto;
+    margin-left: 50px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 0;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+}
