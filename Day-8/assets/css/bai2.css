@@ -1,0 +1,10 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: "Nunito", sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
