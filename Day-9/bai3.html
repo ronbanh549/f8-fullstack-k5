@@ -21,12 +21,37 @@
 
 <body>
     <section class="form">
+        <h1 class="form__heading">Drop Us a Line</h1>
+        <p class="form__desc">Reach out to us from our contact from and we will get back to you shortly.</p>
         <form action="" class="form-modal">
-            <h1 class="form__heading">Drop Us a Line</h1>
-            <p class="form__desc">Reach out to us from our contact from and we will get back to you shortly.</p>
-            <input type="text" id="first-name" placeholder="First Name *">
-            <input type="text" id="last-name" placeholder="Last Name *">
-            <input type="email" id="email" placeholder="Email *">
+            <div class="input-item">
+                <input type="text" id="first-name" placeholder=" ">
+                <label for="first-name">First Name *</label>
+            </div>
+            <div class="input-item">
+                <input type="text" id="last-name" placeholder=" ">
+                <label for="last-name">Last Name *</label>
+            </div>
+            <div class="input-item">
+                <input type="email" id="email" placeholder=" ">
+                <label for="email">Email *</label>
+            </div>
+            <div class="input-item">
+                <select name="sales" id="sales">
+                    <option value="">Sales</option>
+                    <option value="">Select a department</option>
+                    <option value="1">Sales</option>
+                    <option value="2">Marketing</option>
+                    <option value="3">Customer Support</option>
+                </select>
+            </div>
+            <div class="input-item">
+                <textarea name="message" id="message" class="message" placeholder=" ">
+
+                </textarea>
+                <label for="message">Message *</label>
+            </div>
+            <button type="submit" class="send-btn">Send message</button>
         </form>
     </section>
 </body>
