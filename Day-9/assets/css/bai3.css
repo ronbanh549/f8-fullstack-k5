@@ -74,7 +74,7 @@ a {
     border-radius: 10px;
     width: 400px;
     transition: border-color, padding;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 .input-item select {
     color: #666;
@@ -97,7 +97,7 @@ a {
     transform: translateY(-50%);
     color: #666;
     transition: transform, font-size;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     pointer-events: none;
 }
 .input-item input:focus + label,
