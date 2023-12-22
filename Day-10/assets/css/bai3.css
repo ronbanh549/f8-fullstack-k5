@@ -1,0 +1,144 @@
+/* Common */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #323543;
+    text-align: center;
+}
+/*Phần phong bì*/
+.animation {
+    font-size: 0;
+    transition: transform 0.3s;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+.back,
+.right,
+.left {
+    margin-top: 300px;
+    display: inline-block;
+    border: solid;
+    border-width: 50px 100px;
+    border-color: transparent transparent #dc564b #dc564b;
+    position: absolute;
+    transform-origin: top;
+    z-index: 3;
+    transform: translateX(-50%);
+}
+.back {
+    transform: translateX(-50%);
+    border-color: #cf5946;
+    z-index: 2;
+    transition: z-index 0.3s;
+}
+.right {
+    transform: translateX(-50%);
+    border-color: transparent #e46357 #e46357 transparent;
+    z-index: 100;
+}
+.animation:hover {
+    transform: translateY(70px);
+    cursor: pointer;
+}
+.animation:hover .back {
+    z-index: 1;
+}
+.back::after {
+    content: "";
+    display: inline-block;
+    border: solid;
+    border-width: 50px 100px;
+    border-color: transparent transparent #cf5946 transparent;
+    position: absolute;
+    top: -149px;
+    right: -100px;
+    transform-origin: bottom;
+    transform: rotateX(180deg);
+    transition: transform 0.3s;
+    transition-delay: 0.2s;
+}
+.animation:hover .back::after {
+    transform: rotateX(0deg);
+}
+/*Letter*/
+.letter {
+    display: inline-block;
+    position: absolute;
+    top: 320px;
+    width: 150px;
+    height: 60px;
+    background-color: white;
+    z-index: 1;
+    transform: translateX(-50%);
+    overflow: hidden;
+    transition: top 0.3s 0.3s, height 0.3s 0.3s, z-index 0s 0.5s;
+    border-top: dashed #cf5946 10px;
+}
+.letter::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(239, 91, 12, 0.442);
+}
+.letter::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 0;
+    width: 40px;
+    height: 10px;
+    background-color: rgb(160, 49, 24);
+}
+.animation:hover .letter {
+    z-index: 2;
+    top: 230px;
+    height: 150px;
+}
+
+.box-shadow {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    width: 400px;
+    height: 30px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background: radial-gradient(#00000060, #323543, #323543);
+}

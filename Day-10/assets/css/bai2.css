@@ -1,0 +1,95 @@
+/* Common */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #d4d4d4;
+    overflow: hidden;
+}
+
+section {
+    width: fit-content;
+    margin: 100px auto;
+    position: relative;
+}
+ul {
+    width: fit-content;
+    font-size: 0;
+}
+li {
+    font-size: initial;
+    list-style-type: none;
+    display: inline-block;
+}
+label {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border: 6px solid white;
+    outline: 1px solid rgb(212, 212, 212);
+    cursor: pointer;
+}
+/* box con */
+h1,
+p {
+    margin-bottom: 10px;
+}
+.box-inner {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    max-width: 100%;
+    max-height: 200px;
+    padding: 20px;
+    background-color: white;
+    overflow-x: auto;
+    transform-origin: top;
+    transform: rotatex(-90deg);
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.8s;
+}
+/* transition hover */
+label:hover,
+label:focus {
+    background-color: #3398da;
+    color: white;
+}
+
+input:checked + .box-inner {
+    transform: rotatex(0);
+    opacity: 1;
+    transition: transform 0.6s 0.2s, opacity 0.8s 0.2s;
+}
