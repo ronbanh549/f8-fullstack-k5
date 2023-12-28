@@ -1,0 +1,319 @@
+/* Common */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3e3f5e;
+    --btn-color: #615dfa;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: "Rajdhani", sans-serif;
+}
+
+h1 {
+    font-family: "Titillium Web", sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+    display: block;
+    color: inherit;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    width: 100%;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* landing */
+.landing {
+    width: auto;
+    height: 100vh;
+    padding: 80px 0 100px;
+    background: url(https://hoanganf8.github.io/htmlcss_project02/image/landing-background.jpg)
+        no-repeat 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 420px;
+}
+
+.landing__info {
+    text-align: center;
+    color: #fff;
+    align-self: start;
+    margin-top: 60px;
+}
+
+.landing__logo {
+    font-size: 5rem;
+}
+
+.landing__info-pretitle {
+    margin-top: 36px;
+    font-size: 2.4rem;
+}
+
+.landing__info-title {
+    font-size: 10.4rem;
+}
+
+.landing__info-desc {
+    display: inline-block;
+    width: 384px;
+    margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+.tab-switch {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-switch input {
+    display: none;
+}
+
+.tab-switch .switch-btn {
+    width: 180px;
+    height: 54px;
+    border: 1px solid #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: 54px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tab-switch .switch-btn.left-btn {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.tab-switch .switch-btn.right-btn {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+input:checked + .switch-btn {
+    color: var(--primary-color);
+    background-color: #fff;
+    cursor: auto;
+}
+
+/* Form */
+.login-form {
+    width: 484px;
+    padding: 64px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+    position: relative;
+    text-align: center;
+}
+
+.form-decoration {
+    position: absolute;
+    top: -70px;
+    left: -80px;
+}
+
+.form-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #3e3f5e;
+}
+
+.form {
+    margin-top: 76px;
+    width: 100%;
+}
+.form-row.reminder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-input {
+    position: relative;
+}
+
+.form-input input {
+    height: 54px;
+    padding: 0 18px;
+    width: 100%;
+    font-size: 1.6rem;
+    border-radius: 12px;
+    font-weight: 700;
+    outline: none;
+    border: 1px solid #dedeea;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+.form-input input::placeholder {
+    color: #adafca;
+}
+
+.form-input input:focus {
+    border-color: var(--btn-color);
+}
+
+.form-row + .form-row {
+    margin-top: 28px;
+}
+
+.form-input label {
+    position: absolute;
+    left: 13px;
+    top: 20px;
+    color: #adafca;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+    display: block;
+    padding: 0 6px;
+    background: #fff;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.form-input input:focus + label,
+.form-input input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.form-item.reminder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+.form-item.reminder input {
+    display: none;
+}
+.form-item.reminder label,
+.form-link {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+.form-link {
+    color: #adafca;
+}
+.form-link:hover {
+    color: #0cc7d9;
+}
+
+.form-item .checkbox-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #dedeea;
+    transition: all 0.3s;
+}
+
+.form-item.reminder input:checked + .checkbox-box {
+    background: #0cc7d9;
+    border: #0cc7d9;
+}
+
+.checkbox-icon i {
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.form-item.reminder input:checked + .checkbox-box .checkbox-icon i {
+    display: block;
+    opacity: 1;
+}
+
+.login-form__btn {
+    background: var(--btn-color);
+    height: 54px;
+    line-height: 54px;
+    font-size: 1.4rem;
+    box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+}
+
+.lined-text {
+    margin-top: 40px;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.lined-text::before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: #dedeea;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.lined-text::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: #dedeea;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+.social-link:hover {
+    transform: translateY(-4px);
+}
+
+.social-link.facebook {
+    background: #3763d2;
+}
+.social-link.twitter {
+    background: #1abcff;
+}
+.social-link.twitch {
+    background: #7b5dfa;
+}
+.social-link.youtube {
+    background: #fd434f;
+}
