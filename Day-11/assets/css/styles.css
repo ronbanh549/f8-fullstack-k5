@@ -634,6 +634,7 @@ h2 {
 @media screen and (max-width: 991px) {
     .container {
         max-width: 720px;
+        padding: 0 15px;
     }
 
     .header__inner {
