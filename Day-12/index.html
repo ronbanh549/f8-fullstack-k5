@@ -19,101 +19,99 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
 </head>
 
 <body>
     <div class="landing">
-        <div class="landing__decoration"></div>
-        <div class="landing__info">
-            <div class="landing__logo">
-                <span class="icon-logo-vikinger">
-                    <i class="fa-solid fa-mountain"></i>
-                </span>
-            </div>
-            <h2 class="landing__info-pretitle">WELCOME TO</h2>
-            <h1 class="landing__info-title">VIKINGER</h1>
-            <p class="landing__info-desc">
-                The next generation social network &amp; community! Connect with your friends and play with our quests
-                and badges
-                gamification system!
+        <div class="landing-decor"></div>
+        <input type="radio" id="login" name="action" checked hidden />
+        <input type="radio" id="register" name="action" hidden />
+        <section class="landing-content">
+            <img src="./assets/icon/logo.svg" alt="logo" class="logo" />
+
+            <h1 class="landing__title">
+                <span class="landing__subtitle">Welcome to</span>VIKINGER
+            </h1>
+            <p class="landing__desc">
+                The next generation social network & community! Connect with your
+                friends and play with our quests and badges gamification system!
             </p>
-            <div class="tab-switch">
-                <input type="radio" name="action" id="login" checked>
-                <label for="login" class="switch-btn left-btn active">Login</label>
-                <input type="radio" name="action" id="register">
-                <label for="register" class="switch-btn right-btn">Register</label>
+            <div class="landing-action">
+                <label for="login" class="btn login-btn">Login</label>
+                <label for="register" class="btn register-btn">Register</label>
             </div>
-        </div>
-        <div class="landing__form">
-            <div class="login-form">
-                <img src="https://odindesignthemes.com/vikinger/img/landing/rocket.png" class="form-decoration"
-                    alt="form-decoration">
-                <h2 class="form-title">Account Login</h2>
+        </section>
 
-                <form action="" class="form">
-                    <!-- row -->
-                    <div class="form-row">
-                        <div class="form-item">
-                            <div class="form-input">
-                                <input type="text" id="login-username" name="login-username" placeholder=" ">
-                                <label for="login-username">Username or Email</label>
-                            </div>
+        <div class="landing-form">
+            <div class="landing-form__login form">
+                <img src="https://odindesignthemes.com/vikinger/img/landing/rocket.png" alt="rocket"
+                    class="form__img" />
+                <h2 class="form__title">Account Login</h2>
+                <form>
+                    <div class="form-col">
+                        <div class="form-row">
+                            <input type="text" placeholder=" " class="form__input" id="username" autofocus />
+                            <label for="username">Username or Email</label>
+                        </div>
+                        <div class="form-row">
+                            <input type="password" placeholder=" " class="form__input" id="password" />
+                            <label for="password">Password</label>
                         </div>
                     </div>
-
-                    <!-- row -->
-                    <div class="form-row">
-                        <div class="form-item">
-                            <div class="form-input">
-                                <input type="password" id="login-password" name="login-password" placeholder=" ">
-                                <label for="login-password">Password</label>
-                            </div>
-                        </div>
+                    <div class="form-action">
+                        <input type="checkbox" name="checkbox" id="remember" hidden />
+                        <label for="remember" class="remember">Remember Me</label>
+                        <a href="#!" class="form__link">Forgot Password?</a>
                     </div>
-
-                    <!-- row -->
-                    <div class="form-row reminder">
-                        <div class="form-item reminder">
-                            <input type="checkbox" id="login-remember" name="login-remember" checked>
-                            <div class="checkbox-box">
-                                <span class="checkbox-icon"><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-                            <label for="login-remember">Remember Me</label>
-                        </div>
-                        <div class="form-item">
-                            <a href="!#" class="form-link">Forgot Password?</a>
-                        </div>
-                    </div>
-
-                    <!-- row -->
-                    <div class="form-row">
-                        <div class="form-item">
-                            <button class="login-form__btn btn">Login to your Account!</button>
-                        </div>
-                    </div>
+                    <button class="btn form__btn">Login to your Account!</button>
                 </form>
-
-                <p class="lined-text">Login with your Social Account</p>
-
-
+                <p class="form-login__social">Login with your Social Account</p>
                 <div class="social-links">
-                    <a href="#" class="social-link facebook">
-                        <i class="fa-brands fa-square-facebook"></i>
-                    </a>
-                    <a href="#" class="social-link twitter">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-link twitch">
-                        <i class="fa-brands fa-twitch"></i>
-                    </a>
-                    <a href="#" class="social-link youtube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
+                    <a href="#!" class="link facebook"><img src="./assets/icon/facebook.svg" alt="facebook" /></a>
+                    <a href="#!" class="link twitter"><img src="./assets/icon/twitter.svg" alt="twtter" /></a>
+                    <a href="#!" class="link twitch"><img src="./assets/icon/twitch.svg" alt="twitch" /></a>
+                    <a href="#!" class="link youtube"><img src="./assets/icon/youtube.svg" alt="youtube" /></a>
                 </div>
             </div>
-            <div class="register-form"></div>
-        </div>
 
+            <div class="landing-form__register form">
+                <img src="https://odindesignthemes.com/vikinger/img/landing/rocket.png" alt="rocket"
+                    class="form__img" />
+                <h2 class="form__title">Create your Account!</h2>
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder=" " id="email" class="form__input" />
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder=" " class="form__input" id="username-register" />
+                        <label for="username-register">Username</label>
+                    </div>
+                    <div class="form-row">
+                        <input type="password" placeholder=" " class="form__input" id="password-register" />
+                        <label for="password-register">Password</label>
+                    </div>
+                    <div class="form-row">
+                        <input type="password" placeholder=" " class="form__input" id="repassword-register" />
+                        <label for="repassword-register">Repeat Password</label>
+                    </div>
+                    <div class="form-action">
+                        <input type="checkbox" name="checkbox" id="send-news" hidden />
+                        <label for="send-news" class="send-news">Send me news and updates via email</label>
+                    </div>
+                    <button class="btn form__btn form-register__btn">
+                        Register Now!
+                    </button>
+                    <p class="lined-text">You'll receive a confirmation email in your inbox with a link to activate your
+                        account. If you have any problems,
+                        <a href="#!" class="contact-us">contact us</a>!
+                    </p>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 
