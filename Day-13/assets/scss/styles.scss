@@ -28,7 +28,6 @@ a {
 
 .wrapper-inner {
     max-width: 1200px;
-    height: 1000px;
     margin: 0 auto;
     padding: 60px 30px 60px 30px;
     display: grid;
@@ -109,6 +108,10 @@ a {
     display: flex;
     align-items: start;
     height: 128px;
+    .open-btn,
+    .close-btn {
+        display: none;
+    }
 
     .logo {
         display: none;
@@ -204,3 +207,132 @@ a {
 }
 
 // END: MAIN
+
+// responsive
+
+@include responsive(1050px) {
+    .wrapper-inner {
+        overflow: hidden;
+        position: relative;
+        grid-template-columns: auto auto 1fr 1fr 1fr ;
+        gap: 60px 0;
+        grid-template-areas:
+            "HEADER HEADER HEADER HEADER HEADER"
+            "SIDEBAR SIDEBAR SIDEBAR SIDEBAR SIDEBAR"
+            "MAIN MAIN MAIN MAIN MAIN"
+            "MAIN MAIN MAIN MAIN MAIN"
+            "MAIN MAIN MAIN MAIN MAIN"
+            "MAIN MAIN MAIN MAIN MAIN";
+
+        .header {
+            justify-content: space-between;
+            .logo {
+                display: block;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .search {
+                width: 100%;
+                padding: 10px;
+            }
+            .open-btn {
+                display: block;
+                background-color: transparent;
+                font-size: 2.8rem;
+            }
+            .header-wrapper {
+                width: 30vw;
+                height: 100%;
+                row-gap: 30px;
+                padding: 100px 40px 0 40px;
+                background: #f4de4d;
+                flex-direction: column;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                right: 0;
+                transform: translateX(100%);
+                transition: all 0.2s;
+                .close-btn {
+                    position: absolute;
+                    top: 40px;
+                    right: 30px;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    i {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            input:checked ~ .header-wrapper {
+                transform: translateX(0);
+            }
+            .navbar {
+                flex-direction: column;
+                row-gap: 30px;
+            }
+            .action {
+                margin: 0;
+                justify-content: space-between;
+            }
+            .overlay {
+                transform: translateX(-100%);
+                left: 0;
+                top: 0;
+                position: absolute;
+                padding: 100px 40px 0 40px;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.4;
+                z-index: 1;
+                transition: 0.2s;
+            }
+            input:checked ~ .overlay {
+                transform: translateX(0);
+            }
+        }
+        .sidebar {
+            padding: 0;
+            .heading {
+                margin-top: 0;
+            }
+            .navbar {
+                margin-top: 40px;
+                flex-direction: row;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .logo {
+                display: none;
+            }
+            .help-center {
+                display: none;
+            }
+        }
+    }
+}
+
+@include responsive(750px) {
+    .header {
+        .header-wrapper {
+            width: 50vw;
+        }
+    }
+    .sidebar{
+        display: inline-block;
+    }
+    .main {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+       
+    }
+}

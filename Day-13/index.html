@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -67,6 +70,8 @@
                 <a href="#" class="logo">
                     <img src="./assets/icon/logo.svg" alt="">
                 </a>
+                <input type="checkbox" name="menu" id="menu" hidden>
+                <label for="menu" class="overlay"></label>
 
                 <div class="header-wrapper">
                     <form action="#" class="search-form">
@@ -82,18 +87,24 @@
                     </nav>
 
                     <div class="action">
-                        <a href="" class="action-link">
+                        <a href="#!" class="action-link">
                             <img src="./assets/icon/cart.svg" alt="">
                         </a>
-                        <a href="" class="action-link">
+                        <a href="#!" class="action-link">
                             <img src="./assets/icon/person.svg" alt="">
                         </a>
                     </div>
+                    <label class="close-btn" for="menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
                 </div>
+                <label class="open-btn" for="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
             </header>
 
             <!-- END: HEADER -->
-
 
             <!-- BEGIN: MAIN -->
 
